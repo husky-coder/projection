@@ -1,0 +1,3 @@
+rootProject.name='Projection'
+include ':push'
+include ':pull'
