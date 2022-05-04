@@ -16,7 +16,7 @@ import java.nio.ByteBuffer;
 public class SocketClient {
     private static final String TAG = "SocketClient";
 
-    private static final String HOST = "192.168.1.104";
+    private static final String HOST = "push端ip地址";
     private static final int PORT = 8889;
 
     private String host = HOST;
@@ -32,7 +32,7 @@ public class SocketClient {
         this.onSocketCallback = mediaDecode.getOnSocketCallback();
         try {
             // 创建socket客户端
-            URI uri = new URI("ws://192.168.1.104:8889");
+            URI uri = new URI("ws://push端ip地址:8889");
             mWebSocketClient = new ProjectionWebSocketClient(uri);
         } catch (URISyntaxException e) {
             Log.w(TAG, "");

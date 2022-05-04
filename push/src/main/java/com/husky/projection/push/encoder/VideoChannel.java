@@ -132,7 +132,7 @@ public class VideoChannel {
 
             /**
              * 输入编码已经没有数据时，输出编码还不能马上执行到此处，需要将输出编码队列中编码完才能执行到此处
-             * 如果加上编码是否结束标识符判断能马上停止编码（isEncodeOver）
+             * 如果加上编码是否结束标识符判断能马上停止编码（encodeOver）
              */
             if ((bufferInfo.flags & MediaCodec.BUFFER_FLAG_END_OF_STREAM) != 0 || encodeOver) {   // 表示到达文件末尾了
                 Log.d(TAG, mediaCodec + ">>encodeCallback>>BUFFER_FLAG_END_OF_STREAM-->");

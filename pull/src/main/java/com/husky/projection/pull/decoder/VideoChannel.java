@@ -134,7 +134,7 @@ public class VideoChannel implements OnSocketCallback {
 
             /**
              * 输入解码已经读到文件末尾以后，输出解码还不能马上执行到此处，需要将输出解码队列中解码完才能执行到此处
-             * 如果加上解码是否结束标识符判断能马上停止解码（isDecodeOver）
+             * 如果加上解码是否结束标识符判断能马上停止解码（decodeOver）
              */
             if ((bufferInfo.flags & MediaCodec.BUFFER_FLAG_END_OF_STREAM) != 0 || decodeOver) {   // 表示到达文件末尾了
                 Log.d(TAG, mediaCodec + ">>decodeCallback>>BUFFER_FLAG_END_OF_STREAM-->");
